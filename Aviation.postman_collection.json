@@ -13,7 +13,7 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"Status code is 200 for GET_Aviation_charts\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
@@ -37,7 +37,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://api.aviationapi.com/v1/charts?group=1&apt=KAVL",
+					"raw": "https://api.aviationapi.com/v1/charts?apt=KAVL&group=1",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -50,12 +50,12 @@
 					],
 					"query": [
 						{
-							"key": "group",
-							"value": "1"
-						},
-						{
 							"key": "apt",
 							"value": "KAVL"
+						},
+						{
+							"key": "group",
+							"value": "1"
 						}
 					]
 				}
